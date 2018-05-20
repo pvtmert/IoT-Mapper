@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	<android.support.v7.widget.CardView
+		xmlns:card_view="http://schemas.android.com/apk/res-auto"
+		card_view:cardBackgroundColor="@color/cardview_dark_background"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<com.google.android.gms.maps.MapView
+				android:id="@+id/map"
+				xmlns:map="http://schemas.android.com/apk/res-auto"
+				android:layout_width="match_parent"
+				android:layout_height="380sp"
+				map:mapType="terrain"
+				map:uiCompass="true"
+				map:uiRotateGestures="true"
+				map:uiScrollGestures="true"
+				map:uiTiltGestures="true"
+				map:uiZoomControls="true"
+				map:uiZoomGestures="true"
+				/>
+			<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+					android:textColor="@color/cardview_light_background"
+					android:background="@android:color/transparent"
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:singleLine="false"
+					android:autoLink="all"
+					android:padding="10dp"
+					android:id="@+id/text"
+					/>
+			</ScrollView>
+		</LinearLayout>
+	</android.support.v7.widget.CardView>
+
+</LinearLayout>
